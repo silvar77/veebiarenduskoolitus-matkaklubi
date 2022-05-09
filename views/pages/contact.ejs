@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include ("../partials/header.ejs") %>    
+</head>
+
+<body>
+
+    <div class="container-fluid pais-sektsioon">
+        <%- include ("../partials/nav.ejs") %>
+        <div class="info-konteiner">                    
+                    
+            <form>
+                <label id="name"> name: </label> <input type="text"> <br><br>
+                <label id="email"> e-mail: </label> <input type="text">
+                <br><br><br>
+                
+                <textarea id="sonum" rows="4" cols="60"></textarea><br><br>
+                <input id="saada" type="submit"> 
+            </form>                
+    <div> siin on kontakt</div>
+    <script src="/scripts/contact.js"></script>
+</body>
+
+</html>

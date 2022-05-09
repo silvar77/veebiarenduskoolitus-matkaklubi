@@ -1,27 +1,233 @@
-.jumbotron {
-  background: #532F8C;
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  
+}
+
+.pais-sektsioon {
+  background-image: url('/assets/maed.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  padding: 37px 72px 142px;
+  margin-bottom: 100px;
+}
+
+.pais-vasak {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-pealkiri{
+  font-size: 33px;
+  font-weight: 800;
+  color: #0B0B0B;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+
+.pais {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pais > nav {
+  display: flex;
+  align-items: center ;
+}
+
+.pais > nav > a {
+  margin-left: 50px;
+  color: #000;
+  letter-spacing: 2.67px;
+  font-size: 16.67px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.sisu {
+  margin-top: 231.16px;
+  font-weight: 800;
+  position: relative;
+}
+
+.sisu > h1, .sisu > h2, .sisu > h4 {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #0B0B0B;
+}
+
+.sisu > h2 {
+  font-size: 39.57px;
+}
+
+.sisu > h1 {
+  font-size: 74.39px;
+}
+
+.sisu > h4 {
+  font-size: 20.83px;
+  width: 477px;
+  line-height: 29.17px;
+}
+
+.sisu > button {
+  margin-top: 30px;
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2.25px;
   color: white;
-  padding-bottom: 80px; }
-  .jumbotron .btn-primary {
-    background: #845ac7;
-    border-color: #845ac7; }
-    .jumbotron .btn-primary:hover {
-      background: #7646c1; }
-  .jumbotron p {
-    color: #d9ccee;
-    max-width: 75%;
-    margin: 1em auto 2em; }
-  .navbar + .jumbotron {
-    margin-top: -20px; }
-  .jumbotron .lang-logo {
-    display: block;
-    background: #B01302;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border: 2px solid white; }
-    .jumbotron .lang-logo img {
-      max-width: 100%; }
+  background: #0B0B0B 0% 0% no-repeat padding-box;
+  padding: 21.44px 22.5px 21.56px;
+  border: none;
+}
+
+.pildistajanaine {
+  width: 900px;
+  height: 900px;
+  background-image: url('/assets/pildistajanaine.png');
+  background-size: cover;
+  border-radius: 457px;
+  display: block;
+  background-position: center;
+  position: absolute;
+  top: -200px;
+  left: 700px;
+  z-index: 1;
+}
+
+.vari2 {
+  width: 756px;
+  height: 89px;
+  background-image: url('/assets/vari2.png');
+  background-size: cover;
+  display: block;
+  background-position: center;
+  position: absolute;
+  left: 770px;
+  bottom: -440px;    
+}
+
+.liblikas3 {
+  width: 60px;
+  height: 32px;
+  background-image: url('/assets/liblikas3.png');
+  background-size: cover;
+  display: block;
+  background-position: center;
+  position: absolute;
+  top: 65px;
+  left: -40px;
+  z-index: 1;
+  
+}
+
+.liblikas4 {
+  width: 75.27px;
+  height: 66.04px;
+  background-image: url('/assets/liblikas4.png');
+  background-size: cover;
+  display: block;
+  background-position: center;
+  position: absolute;
+  top: -40px;
+  left: 500px;
+  z-index: 1;
+  
+}
+
+.kesk-sektsioon {
+  padding: 72px;
+  margin-bottom: 500px;    
+}
+
+.sisu2 {    
+  position: relative;
+}
+
+.sisu2 > h1 {
+  font-size: 54.17px;
+  font-weight: 700;
+  width: 448px;
+  margin-top: 10px;
+  letter-spacing: -1.08px;
+  line-height: 58px;
+}
+
+.sisu2 > h3 {
+  font-size: 20.83px;
+  color: #3d3d3d;
+  width: 448px;
+  margin-top: 24.48px;
+  line-height: 33.33px;
+}
+
+.button {
+  background: transparent;
+  border: none;
+  outline: none;
+  z-index: 1;
+}
+
+.sisu2 > nav {
+  margin-top: 201.43px;
+  font-weight: 400;
+}
+
+.binokliga2 {
+  width: 309px;
+  height: 406px;
+  background-image: url('/assets/binokliga2.png');
+  background-size: cover;
+  display: block;
+  background-position: center;
+  position: absolute;
+  margin-left: 464px;
+  margin-top: -430px;
+  margin-bottom: 600px;
+  z-index: 1;
+}
+
+.binokliga1 {
+  width: 309px;
+  height: 406px;
+  background-image: url('/assets/binokliga1.png');
+  background-size: cover;
+  display: block;
+  background-position: center;
+  position: absolute;
+  margin-left: 807px;
+  margin-top: -430px;
+  z-index: 1;
+}
+
+.kaardivaatajad {
+  width: 309px;
+  height: 406px;
+  background-image: url('/assets/kaardivaatajad.png');
+  background-size: cover;
+  display: block;
+  background-position: center;
+  position: absolute;
+  margin-left: 1150px;
+  margin-top: -430px;
+}
+
+.vari3 {
+  width: 403px;
+  height: 499px;
+  background-image: url('/assets/vari3.png');
+  background-size: cover;
+  display: block;
+  background-position: center;
+  position: absolute;
+  margin-left: 430px;
+  margin-top: -470px;
+  margin-bottom: 600px;
+}
+
 
