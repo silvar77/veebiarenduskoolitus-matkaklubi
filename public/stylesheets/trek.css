@@ -1,0 +1,21 @@
+.matkad {
+    margin-top: 60px;
+    font-size: 18px;
+    
+}
+
+.matk {
+    padding: 30px;
+    border-right: 1px solid gray;
+    width: 33%;
+}
+
+.matk:last-child {
+    border-right: none;
+}
+
+.matka-nupp {
+    margin-top: 20px;
+    font-size: 14px !important;
+}
+

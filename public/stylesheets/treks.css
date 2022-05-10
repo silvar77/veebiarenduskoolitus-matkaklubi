@@ -1,6 +1,10 @@
 .matkad {
     background-color: rgb(49, 49, 49);
-    padding: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: auto;
 }
 
 .matk {
