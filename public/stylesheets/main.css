@@ -142,7 +142,7 @@ body {
 
 .kesk-sektsioon {
   padding: 72px;
-  margin-bottom: 500px;    
+  margin-top: 400px;    
 }
 
 .sisu2 {    
@@ -230,4 +230,76 @@ body {
   margin-bottom: 600px;
 }
 
+.allvasak {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding-left: 59px;
+}
+
+.logo-pealkiri-alumine {
+  padding-top: 30px;
+  font-size: 27px;
+  font-weight: 800;
+  color: #0B0B0B;
+  width: 103px;
+  margin-left: 15px;
+  word-wrap: normal;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.aluminenav {
+  margin-top: 200px;
+  margin-left: 56px;
+  width: 1327px;
+  height: 276px;
+  background: #F3F3F3 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.alumine {
+  width: 90%;
+  height: 276px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  padding-top: 60px;  
+  background: #979696 0% 0%;
+  opacity: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items:flex-start;  
+}
+
+.aluminenav > nav {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding-right: 47.83px;  
+}
+
+.aluminenav > nav > a {
+  margin-left: 84px;
+  color: #000;
+  letter-spacing: 2.67px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16.67px;
+}
+
+.aluminenav > nav > a:hover {
+  background: rgb(86, 86, 86);
+}
+
+.tekstidikoonid {
+  display: flex;
+  flex: 50%;
+  align-items: center;
+  margin-left: 59px;
+  margin-right:47.83px;
+  justify-content: space-between;  
+}
 

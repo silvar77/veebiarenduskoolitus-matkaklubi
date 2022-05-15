@@ -1,4 +1,6 @@
  const express = require('express');
+const { get } = require('express/lib/response');
+const res = require('express/lib/response');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 
@@ -12,7 +14,7 @@ const matk1 = {
   locationLatitude: '58.11520',
   locationLongitude: '27.04692',
   price: '0€',
-  imageUrl: 'https://static.visitestonia.com/images/2924300/100…_false_false_14df96813a0fc58588c7fa39b187f0d5.jpg',
+  imageUrl: 'https://www.reisijutud.com/sites/default/files/images/taevaskoja-emalate.jpg',
   participants: [],
 };
 
@@ -26,7 +28,7 @@ const matk2 = {
   locationLatitude: '57.81133',
   locationLongitude: '27.05531',
   price: '25€',
-  imageUrl: 'https://static.visitestonia.com/images/3490610/100…_false_false_bf438c714f92e0ae9af07dc8115a54d9.jpg',
+  imageUrl: 'https://media.voog.com/0000/0030/9870/photos/verij2rve_matkarada_1_large_large.jpg',
   participants: []
 };
 
@@ -48,17 +50,27 @@ const matkad = [matk1, matk2, matk3];
 
 const naitaMatkaVaadet = (req, res) => {
   const matk = matkad.find((matk) => matk.id === parseInt(req.params.matkaId))
-  return res.render('pages/trek', { matk: matk })
+  return res.render('pages/trek', { matk })
+}
+
+const registreeriOsaleja = (req,res) => {
+  const paringuKeha = req.body;
+  console.log(osaleja);
+  const matk = matkad.find((matk) => matk.id === parseInt(paringuKeha.matkaId));
+  matk.participants.push(paringuKeha.osaleja);
+  res.json({ response: 'Töötab!' });
 }
 
 express()
-  .use(express.static(path.join(__dirname, 'public')))
+  .use(express.json())
+  .use(express.static(path.join(__dirname, 'public')))  
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .get('/treks', (req, res) => res.render('pages/treks', { matkad: matkad }))
   .get('/treks/:matkaId', naitaMatkaVaadet)
+  .get('/contact', (req, res) => res.render('pages/contact'))
   .get('/news', (req, res) => res.render('pages/news'))
-  .get('/contact', (req, res) => res.render('pages/contact'))  
+  .post('/api/register', registreeriOsaleja)
   .listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
 

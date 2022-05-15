@@ -1,21 +1,39 @@
-.matkad {
+.matkale-registreerumine {
+    display: flex;
     margin-top: 60px;
-    font-size: 18px;
-    
 }
 
 .matk {
-    padding: 30px;
+    width: 50%;
+    padding: 20px;
     border-right: 1px solid gray;
-    width: 33%;
 }
 
-.matk:last-child {
-    border-right: none;
+.matka-pealkiri,
+.vormi-pealkiri {
+    font-size: 2rem;
+    margin-bottom: 16px;
 }
 
-.matka-nupp {
+.matka-asukoht {
+    margin-top: 16px;
+}
+
+.matka-hind {
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.matka-pilt {
     margin-top: 20px;
-    font-size: 14px !important;
+}
+
+.matka-pilt>img {
+    width: 100%;
+}
+
+.vorm {
+    width: 50%;
+    padding: 20px;
 }
 

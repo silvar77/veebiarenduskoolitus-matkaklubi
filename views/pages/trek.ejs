@@ -36,25 +36,33 @@
                     <div class="vormi-pealkiri">
                         <b>Täida siin registreerimisväljad!</b>
                     </div>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Osaleja nimi</label>
-                        <input type="text" class="form-control" id="name" placeholder="nimi">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Emaili aadress</label>
-                        <input type="email" class="form-control" id="email" placeholder="e-mail">
-                    </div>
-                    <div class="mb-3">
-                        <label for="description" class="form-label">Märkused</label>
-                        <textarea class="form-control" id="description" rows="3"></textarea>
-                    </div>
-                    <div class="d-md-flex justify-content-md-end">
-                        <button type="button" id="registreeru" class="btn btn-dark">Registreerimine</button>
-                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Osaleja nimi</label>
+                            <input e type="text" class="form-control" id="name" placeholder="nimi" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Emaili aadress</label>
+                            <input e type="email" class="form-control" id="email" placeholder="e-mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Märkused</label>
+                            <textarea  class="form-control" id="description" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <span id="errorMessage"></span>
+                        </div>
+                        <div class="d-md-flex justify-content-md-end">
+                            <button type="button" id="registreeru" class="btn btn-dark">Registreerimine</button>
+                        </div>
+                    </form>
+                    
                 </div>
             </div>
     </div>
+    
     <script src="/scripts/trek.js"></script>
+    <%- include ("../partials/aluminenav.ejs") %>
 </body>
 
 </html>
