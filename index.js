@@ -1,6 +1,5 @@
- const express = require('express');
-const { get } = require('express/lib/response');
-const res = require('express/lib/response');
+
+const express = require('express');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 
@@ -61,16 +60,31 @@ const registreeriOsaleja = (req,res) => {
   res.json({ response: 'Töötab!' });
 }
 
+const tagastaMatkad = (req, res) => {
+  res.json(matkad);
+}
+
+const salvestaMatk = (req, res) => {
+  const matkaId = req.params.matkaId;
+  let matk = matkad.find((matk) => matk.id === parseInt(matkaId));
+  matk.title = req.body.title;
+  matk.description = req.body.description;
+  matk.imageUrl = req.body.imageUrl;
+  res.json({ response: 'Töötab!' });
+}
+
 express()
   .use(express.json())
-  .use(express.static(path.join(__dirname, 'public')))  
+  .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
-  .get('/treks', (req, res) => res.render('pages/treks', { matkad: matkad }))
-  .get('/treks/:matkaId', naitaMatkaVaadet)
   .get('/contact', (req, res) => res.render('pages/contact'))
+  .get('/treks/:matkaId', naitaMatkaVaadet)
+  .get('/treks', (req, res) => res.render('pages/treks', { matkad: matkad }))
   .get('/news', (req, res) => res.render('pages/news'))
+  .get('/admin', (req, res) => res.render('pages/admin'))
   .post('/api/register', registreeriOsaleja)
+  .get('/api/treks', tagastaMatkad)
+  .post('/api/treks/:matkaId', salvestaMatk)
   .listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
-
