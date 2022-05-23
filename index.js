@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000;
 
 let matkad;
 
-const uri = "mongodb+srv://matkaapp2203:K0n1n57g@cluster0.g4czp.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://silvar77:koolitus123@cluster0.hr4v2.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 const loeMatkadMallu = (async () => {
